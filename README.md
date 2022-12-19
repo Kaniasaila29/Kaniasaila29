@@ -38,11 +38,11 @@ Transpose matriks adalah matriks baru yang diperoleh dengan cara menukar elemen-
 		cout << "Masukkan Nilai-Nilai Matriks\n";
 		for (int i = 0; i < m; i++)
 		{
-			for (int j = 0; j < n; j++)
-			{
-				cout <<"Baris ke "<<i+1<<", Kolom ke "<<j+1<<" : ";
-				cin  >> matriks[i][j];
-			}
+		for (int j = 0; j < n; j++)
+		{
+		cout <<"Baris ke "<<i+1<<", Kolom ke "<<j+1<<" : ";
+		cin  >> matriks[i][j];
+		}
 		}
 		
 		cout<<endl;
@@ -50,30 +50,30 @@ Transpose matriks adalah matriks baru yang diperoleh dengan cara menukar elemen-
 		cout << "Hasil dari matriks yang diinputkan :\n";
 		for (int i = 0; i < m; i++)
 		{
-			for (int j = 0; j < n; j++)
-			{
-				cout << matriks[i][j] << "\t";
-			}
-			cout << endl;
+		for (int j = 0; j < n; j++)
+		{
+		cout << matriks[i][j] << "\t";
+		}
+		cout << endl;
 		}
 		cout << endl;
 
 		for (int i = 0; i < m; i++)
 		{
-			for (int j = 0; j < n; j++)
-			{
-				transpose[j][i] = matriks[i][j];
-			}
+		for (int j = 0; j < n; j++)
+		{
+		transpose[j][i] = matriks[i][j];
+		}
 		}
 
 		cout << "Hasil Transpose Matriks: \n";
 		for (int i = 0; i < n; i++)
 		{
-			for (int j = 0; j < m; j++)
-			{
-				cout << transpose[i][j] << "\t";
-			}
-			cout << endl;
+		for (int j = 0; j < m; j++)
+		{
+		cout << transpose[i][j] << "\t";
+		}
+		cout << endl;
 		}
 		cout <<endl;
 		cout << "====================================================="<<endl;
