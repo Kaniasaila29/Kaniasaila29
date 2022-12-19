@@ -19,18 +19,19 @@ Transpose matriks adalah matriks baru yang diperoleh dengan cara menukar elemen-
 		{
 		int m, n;
 
-		cout << "UAS"<<endl;
-		cout << "===="<<endl;
+		cout << "		      UJIAN AKHIR SEMESTER				"<<endl;
+		cout << "==============================================================="<<endl;
 		cout << "Nama : Kania Sailanul Anjani "<<endl;
 		cout << "NIM  : 1227050064 "<<endl;
-		cout << "======================================"<<endl<<endl<<endl;
-		//mengubah baris jadi kolom dan kolom jadi baris (tranpose)//
+		cout << "==============================================================="<<endl;
 		cout << "No.1 Mengubah baris jadi kolom dan kolom jadi baris (transpose)" << endl;
 		cout << "==============================================================="<<endl;
 		cout << "Masukkan jumlah baris matriks: ";
 		cin >> m;
 		cout << "Masukkan jumlah kolom matriks: ";
 		cin >> n;
+		
+		cout<<endl;
 
 		int matriks[m][n], transpose[n][m];
 
@@ -43,6 +44,8 @@ Transpose matriks adalah matriks baru yang diperoleh dengan cara menukar elemen-
 				cin  >> matriks[i][j];
 			}
 		}
+		
+		cout<<endl;
 
 		cout << "Hasil dari matriks yang diinputkan :\n";
 		for (int i = 0; i < m; i++)
@@ -73,100 +76,96 @@ Transpose matriks adalah matriks baru yang diperoleh dengan cara menukar elemen-
 			cout << endl;
 		}
 		cout <<endl;
-		//menampilkan bilangan yang habis dibagi 3,5,dan 7//
-		cout << "No.2 Menampilkan bilangan yang habis dibagi 3, 5 dan 7" << endl;
-		cout << "==============================================================="<<endl;
-		cout << "Masukkan jumlah baris matriks: ";
-		cin >> m;
-		cout << "Masukkan jumlah kolom matriks: ";
-		cin >> n;
+		cout << "====================================================="<<endl;
+		cout << "No.2 Menampilkan bilangan yang habis dibagi 3,5,dan 7"<<endl;
+		cout << "====================================================="<<endl;
+		
+	int arr[100][100], jumlahBaris, jumlahKolom, i, j, baris, kolom;
 
-		cout << "Masukkan Nilai-Nilai\n";
-		for (int i = 0; i < m; i++)
-		{
-			for (int j = 0; j < n; j++)
-			{
-				cout <<"("<<i+1<<","<<j+1<<") : ";
-				cin  >> matriks[i][j];
-			}
-		}
-		cout << endl;
+    cout<<"Input jumlah baris: "; cin>>jumlahBaris;
+    cout<<"Input jumlah kolom: "; cin>>jumlahKolom;
+    cout << endl;
 
-		bool cek = true;
-		cout << "Nilai yang tidak bisa dibagi 3, 5, 7 yaitu :";
-		for (int i = 0; i < m; i++)
-		{
-			for (int j = 0; j < n; j++)
-			{
-				if (matriks[i][j]%3!=0 && matriks[i][j]%5!=0 && matriks[i][j]%7!=0)
-				{
-					cout << " " << matriks[i][j];
-					cek = false;
-				}
-			}
-		}
-		if (cek)
-		{
-			cout << " Nilai yang anda input bisa dibagi 3, 5 dan 7" <<endl;
-		}
-		return 0;
+    for(i = 0; i < jumlahBaris; i++){
+        for(j = 0; j < jumlahKolom; j++){
+            cout << "Baris " <<i+1<<", kolom "<<j+1<< " = ";
+            cin >> arr[i][j];
+        }
+        cout << endl;
+    }
 
-		}
+    cout << "Hasil matriks: " << endl;
 
+    for(i = 0; i < jumlahBaris ; i++){
+    for(j = 0; j < jumlahKolom; j++){
+        cout << arr[i][j] << " ";
+    }
+    cout << endl;
+    }
+
+    cout << "\nBilangan yang habis dibagi 3,5,dan 7: " << endl;
+
+    for(i = 0; i < jumlahBaris ; i++){
+    for(j = 0; j < jumlahKolom; j++){
+        if(arr[i][j] % 3 == 0 || arr[i][j] % 5 == 0 || arr[i][j] % 7 == 0){
+        cout << arr[i][j] << " ";
+        }
+    }
+    cout << endl;
+    }
+
+    
+    cout << endl;
+    return 0;
+}
+		
 ## Output
 
-		UAS
-		====
-		Nama : Kania Sailanul Anjani
-		NIM  : 1227050064
-		======================================
-		No.1 Mengubah baris jadi kolom dan kolom jadi baris (transpose)
-		===============================================================
-		Masukkan jumlah baris matriks: 4
-		Masukkan jumlah kolom matriks: 3
-		Masukkan Nilai-Nilai Matriks
-		Baris ke 1, Kolom ke 1 : 5
-		Baris ke 1, Kolom ke 2 : 6
-		Baris ke 1, Kolom ke 3 : 7
-		Baris ke 2, Kolom ke 1 : 8
-		Baris ke 2, Kolom ke 2 : 4
-		Baris ke 2, Kolom ke 3 : 5
-		Baris ke 3, Kolom ke 1 : 3
-		Baris ke 3, Kolom ke 2 : 2
-		Baris ke 3, Kolom ke 3 : 1
-		Baris ke 4, Kolom ke 1 : 5
-		Baris ke 4, Kolom ke 2 : 7
-		Baris ke 4, Kolom ke 3 : 9
-		Hasil dari matriks yang diinputkan :
-		5       6       7
-		8       4       5
-		3       2       1
-		5       7       9
+		                      UJIAN AKHIR SEMESTER
+===============================================================
+Nama : Kania Sailanul Anjani
+NIM  : 1227050064
+===============================================================
+No.1 Mengubah baris jadi kolom dan kolom jadi baris (transpose)
+===============================================================
+Masukkan jumlah baris matriks: 2
+Masukkan jumlah kolom matriks: 2
 
-		Hasil Transpose Matriks:
-		5       8       3       5
-		6       4       2       7
-		7       5       1       9
+Masukkan Nilai-Nilai Matriks
+Baris ke 1, Kolom ke 1 : 3
+Baris ke 1, Kolom ke 2 : 7
+Baris ke 2, Kolom ke 1 : 5
+Baris ke 2, Kolom ke 2 : 8
 
-		No.2 Menampilkan bilangan yang habis dibagi 3, 5 dan 7
-		===============================================================
-		Masukkan jumlah baris matriks: 4
-		Masukkan jumlah kolom matriks: 3
-		Masukkan Nilai-Nilai
-		(1,1) : 5
-		(1,2) : 7
-		(1,3) : 8
-		(2,1) : 9
-		(2,2) : 4
-		(2,3) : 3
-		(3,1) : 5
-		(3,2) : 9
-		(3,3) : 7
-		(4,1) : 2
-		(4,2) : 1
-		(4,3) : 6
+Hasil dari matriks yang diinputkan :
+3       7
+5       8
 
-		Nilai yang tidak bisa dibagi 3, 5, 7 yaitu : 8 4 2 1
-		--------------------------------
-		Process exited after 21.84 seconds with return value 0
-		Press any key to continue . . .
+Hasil Transpose Matriks:
+3       5
+7       8
+
+=====================================================
+No.2 Menampilkan bilangan yang habis dibagi 3,5,dan 7
+=====================================================
+Input jumlah baris: 2
+Input jumlah kolom: 2
+
+Baris 1, kolom 1 = 3
+Baris 1, kolom 2 = 5
+
+Baris 2, kolom 1 = 7
+Baris 2, kolom 2 = 9
+
+Hasil matriks:
+3 5
+7 9
+
+Bilangan yang habis dibagi 3,5,dan 7:
+3 5
+7 9
+
+
+--------------------------------
+Process exited after 8.209 seconds with return value 0
+Press any key to continue . . .
